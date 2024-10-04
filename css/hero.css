@@ -1,0 +1,211 @@
+.hero {
+    position: relative;
+    padding: 0 128px;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+
+    & .image {
+        position: relative;
+
+        & .bakground {
+            z-index: -1;
+            position: absolute;
+            height: 95%;
+
+            bottom: 0;
+            left: 0;
+        }
+
+        & img {
+            height: 100%;
+        }
+    }
+
+    & .information {
+        max-width: 50%;
+
+        & h1{
+            font-size: 80px;
+        }
+
+        & .text {
+            border-left: 1px solid #BFC0C2;
+            margin-top: 60px;
+            margin-bottom: 70px;
+            padding: 0 0 0 24px;
+
+            & .subtitle1 {
+                padding-bottom: 50px;
+            }
+        }
+
+        & .rating {
+            font-weight: 600;
+            display: flex;
+
+            & .rating-inner {
+                display: flex;
+                align-items: center;
+                margin-right: 64px;
+
+                &> :first-child {
+                    margin-right: 16px;
+                }
+            }
+
+            & .body3 {
+                color: var(--black-200);
+            }
+        }
+    }
+
+    & .textAnimation {
+        z-index: -1;
+        user-select: none;
+        background-color: var(--black-500);
+        color: var(--white-50);
+        position: absolute;
+        width: 100vw;
+        height: 46px;
+        display: flex;
+        align-items: center;
+
+        & .marquee {
+            width: 100%;
+            white-space: nowrap;
+            animation: scroll 10s linear infinite alternate;
+            
+            & span {
+                padding: 0 14px;
+            }
+        }
+
+    }
+
+    & .textAnimation:first-child {
+        top: 15%;
+        right: -10%;
+        transform: rotate(25deg);
+    }
+
+    & .textAnimation:nth-child(2) {
+        bottom: 80%;
+        right: -70%;
+        transform: rotate(-25deg);
+    }
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(-200%);
+    }
+}
+
+@media screen and (max-width: 1300px){
+    .hero {
+    
+        & .image {
+            position: relative;
+            height: min-content;
+            top: 120px;
+    
+            & .bakground {
+                z-index: -1;
+                position: absolute;
+                height: 95%;
+    
+                bottom: 0;
+                left: 0;
+            }
+    
+            & img {
+                height: 70%;
+            }
+        }
+    
+        & .information {
+            max-width: 50%;
+    
+            & .text {
+                border-left: 1px solid #BFC0C2;
+                margin-top: 60px;
+                margin-bottom: 70px;
+                padding: 0 0 0 24px;
+    
+                & .subtitle1 {
+                    padding-bottom: 50px;
+                }
+            }
+    
+            & .rating {
+                font-weight: 600;
+                display: flex;
+    
+                & .rating-inner {
+                    display: flex;
+                    align-items: center;
+                    margin-right: 64px;
+    
+                    &> :first-child {
+                        margin-right: 16px;
+                    }
+                }
+    
+                & .body3 {
+                    color: var(--black-200);
+                }
+            }
+        }
+    
+        & .textAnimation {
+            z-index: -1;
+            user-select: none;
+            background-color: var(--black-500);
+            color: var(--white-50);
+            position: absolute;
+            width: 100vw;
+            height: 46px;
+            display: flex;
+            align-items: center;
+    
+            & .marquee {
+                width: 100%;
+                white-space: nowrap;
+                animation: scroll 10s linear infinite alternate;
+                
+                & span {
+                    padding: 0 14px;
+                }
+            }
+    
+        }
+    
+        & .textAnimation:first-child {
+            top: 15%;
+            right: -10%;
+            transform: rotate(25deg);
+        }
+    
+        & .textAnimation:nth-child(2) {
+            bottom: 80%;
+            right: -70%;
+            transform: rotate(-25deg);
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .hero .image,
+    .textAnimation {
+        display: none !important;
+    }
+
+    .hero {
+        padding: 0;
+    }
+}
