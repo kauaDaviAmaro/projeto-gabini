@@ -1,5 +1,6 @@
 @import 'config.css';
 @import 'productsHighlighted.css';
+@import 'productsHighlighted.css';
 
 main > * {
     margin: 80px 0;
