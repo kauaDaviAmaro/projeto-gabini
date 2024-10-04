@@ -1,0 +1,86 @@
+.testimonials {
+    text-align: center;
+    background-color: #f3f5f9;
+    padding: 91px;
+    border-radius: 30px;
+
+    & .subtitle1 {
+        margin-bottom: 16px;
+    }
+
+    & .body2 {
+        margin-bottom: 50px;
+        color: #767A85;
+    }
+
+    & .pagination {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        margin-top: 30px;
+
+        & img {
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+
+            cursor: pointer;
+
+            &:not(.active) {
+                border: 1px solid var(--White-white-700, #B5B5B5);
+            }
+        }
+
+        & .active {
+            background-color: var(--black-500);
+        }
+    }
+
+    & .testimonialsContainer {
+        overflow: hidden;
+    }
+
+    & .testimonialsWrapper {
+        max-width: 100%;
+        position: relative;
+        transition: transform 0.5s ease;
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+
+        & .testimonialsCard {
+            background-color: var(--white-50);
+            flex: 1 0 calc(100% / 3 - 30px);
+            border-radius: 30px;
+            padding: 40px 30px;
+
+            & .review {
+                margin-bottom: 24px;
+
+                & .stars {
+                    margin-bottom: 24px
+                }
+            }
+
+            & img {
+                margin-bottom: 16px;
+                border-radius: 50%;
+                object-fit: cover;
+                width: 56px;
+                height: 56px;
+            }
+
+            & .name {
+                color: #0A102F;
+                margin-bottom: 4px;
+            }
+
+            & .job {
+                color: #878787;
+            }
+        }
+    }
+
+}

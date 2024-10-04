@@ -30,6 +30,45 @@ const animateScroll = (element, value) => {
 
 initializeCountdown(3600);
 
+let currentIndex = 0;
+const testimonials = document.querySelectorAll('.testimonialsCard');
+const totalTestimonials = testimonials.length;
+const testimonialsPerPage = 3;
+
+const nextButton = document.querySelector('#next');
+const prevButton = document.querySelector('#prev');
+
+function showTestimonials() {
+    const container = document.querySelector('.testimonialsWrapper');
+    const offset = (currentIndex * testimonialsPerPage) * 100 / testimonialsPerPage;
+    container.style.transform = `translateX(-${offset}%)`;
+
+    prevButton.classList.toggle('active', currentIndex !== 0);
+    nextButton.classList.toggle('active', currentIndex !== Math.ceil(totalTestimonials / testimonialsPerPage) - 1);
+
+    prevButton.src = currentIndex === 0 ? 'imgs/desactiveArrow.svg' : 'imgs/activeArrow.svg';
+    prevButton.style.transform = currentIndex === 0 ? '' : 'rotate(180deg)';
+    
+    nextButton.src = currentIndex === Math.ceil(totalTestimonials / testimonialsPerPage) - 1 ? 'imgs/desactiveArrow.svg' : 'imgs/activeArrow.svg';
+    nextButton.style.transform = currentIndex === Math.ceil(totalTestimonials / testimonialsPerPage) - 1 ? 'rotate(180deg)' : '';
+}
+
+
+function nextTestimonial() {
+    currentIndex = (currentIndex + 1) % Math.ceil(totalTestimonials / testimonialsPerPage);    
+    showTestimonials();
+}
+
+function prevTestimonial() {
+    currentIndex = (currentIndex - 1 + Math.ceil(totalTestimonials / testimonialsPerPage)) % Math.ceil(totalTestimonials / testimonialsPerPage);
+    showTestimonials();
+}
+
+nextButton.addEventListener('click', nextTestimonial);
+prevButton.addEventListener('click', prevTestimonial);
+
+showTestimonials();
+
 const redBlue = document.querySelector('#redBlue');
 const bluePink = document.querySelector('#bluePink');
 
