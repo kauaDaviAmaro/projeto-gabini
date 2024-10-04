@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+    --white: #ffffff;
+    --white-600: #e8e8e8;
+    --nav-color: #000000;
+    --blue: #6987cd;
+    --white-50: #FFFFFF;
+    --white-700: #B5B5B5;
+
+    --black-50: #E6E6E6;
+    --black-100: #B0B0B0;
+    --black-500: #000000;
+    --black-200: #8A8A8A;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+
+main {
+    padding: 20px;
+}
+
+
+body {
+    overflow-x: hidden;
+}
+
+h1 {
+    font-size: 100px;
+    line-height: 90px;
+}
+
+h2 {
+    font-size: 90px;
+    line-height: 80px;
+}
+
+h3 {
+    font-size: 80px;
+    line-height: 80px;
+}
+
+h4 {
+    font-size: 60px;
+    line-height: 68px;
+}
+
+h5 {
+    font-size: 48px;
+    line-height: 56px;
+}
+
+h6 {
+    font-size: 40px;
+}
+
+.body2 {
+    font-size: 18px;
+    line-height: 24px;
+}
+
+.body3 {
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.subtitle1 {
+    font-size: 36px;
+    line-height: 44px;
+}
+
+.subtitle2 {
+    font-size: 30px;
+    line-height: 38px;
+}
+
+.subtitle3 {
+    font-size: 24px;
+    line-height: 30px;
+}
+
+.caption {
+    font-size: 14px;
+    line-height: 15px;
+}
+
+button {
+    width: fit-content;
+    padding: 8px 8px 8px 24px;
+    border-radius: 40px;
+    background-color: var(--white-50);
+    border: 1px solid var(--white-700);
+
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 500;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    cursor: pointer;
+    transition: border 0.3s ease-in-out;
+
+    & img {
+        margin-left: 30px;
+        padding: 10px;
+        border-radius: 50%;
+        background-color: var(--black-500);
+    }
+
+    &:hover {
+        border-color: var(--black-500);
+    }
+}
