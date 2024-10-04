@@ -1,0 +1,85 @@
+.navbar {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 36px 0;
+    border-bottom: 1px solid var(--white-600);
+    font-size: 14px;
+    background-color: var(--white-50);
+
+    & a {
+        padding: 0 16px;
+        text-decoration: none;
+        text-transform: uppercase;
+        color: black;
+
+        transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+
+        &:hover {
+            color: var(--blue);
+            transform: scale(1.015);
+        }
+    }
+
+    & .brand {
+        & img {
+            width: 135px;
+        }
+    }
+
+    & .links {
+        position: relative;
+        display: flex;
+
+        & a {
+            display: flex;
+            align-items: center;
+        }
+
+        & .dropdown {
+            background-color: var(--white);
+            position: absolute;
+            margin: 10px 0;
+            padding: 24px;
+
+            width: 159px;
+            border: 1px solid var(--white-600);
+
+            box-shadow: rgba(0, 0, 0, 0.199) 0px 5px 15px;
+
+            display: none;
+
+            &.show {
+                display: block;
+            }
+
+            & a {
+                padding: 5px 0;
+            }
+
+            & .subdropdown {
+                margin-top: 0;
+                top: 0;
+                left: 70%;
+            }
+        }
+    }
+
+    & .login-register {
+        font-weight: 600;
+
+        & #signin {
+            border-right: 1px solid var(--white-600);
+        }
+
+        & #signup {
+            color: var(--blue);
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .navbar .links {
+        display: none;
+    }
+}
