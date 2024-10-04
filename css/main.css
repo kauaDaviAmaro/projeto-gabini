@@ -3,6 +3,7 @@
 @import 'promotion.css';
 @import 'testimonials.css';
 @import 'navbar.css';
+@import 'newProducts.css';
 
 main > * {
     margin: 80px 0;
