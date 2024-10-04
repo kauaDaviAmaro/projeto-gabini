@@ -1,0 +1,129 @@
+footer {
+    margin: 20px;
+    border-radius: 40px;
+    padding: 80px;
+    background-color: var(--black-500);
+
+    & .wrapper {
+        display: flex;
+        justify-content: space-between;
+
+    }
+
+    & .footerWrapper {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        position: relative;
+        min-height: 240px;
+
+        & .others {
+            padding-top: 30px;
+            position: absolute;
+            width: 100%;
+            height: 108px;
+            bottom: -80px;
+            z-index: 3;
+            background-color: black;
+
+
+            & .links a {
+                color: var(--white-50);
+                margin: 0 16px;
+            }
+
+            & .content {
+                margin-top: 24px;
+                display: flex;
+                justify-content: space-between;
+            }
+
+            & .line {
+                width: 100%;
+                height: 1px;
+                background-color: #383838;
+            }
+        }
+    }
+
+    & .copyright {
+        color: #C2C2C2;
+    }
+
+    & .bigLogo {
+        z-index: 0;
+        position: absolute;
+        top: 0px;
+        width: 90%;
+
+        & img {
+            width: 100%;
+        }
+    }
+
+    & .subscrive {
+
+        & .body1 {
+            color: var(--white-50);
+            margin-bottom: 16px;
+        }
+
+        & .caption {
+            color: #878787;
+            margin-bottom: 32px;
+        }
+
+        & .input {
+            position: relative;
+
+            & input {
+                color: var(--white-50);
+                border: 1px solid #767A85;
+                border-radius: 40px;
+                width: 100%;
+                height: 60px;
+                padding-left: 16px;
+                background-color: #4B4B4B;
+            }
+
+            & img {
+                position: absolute;
+                right: 16px;
+                top: 50%;
+                transform: translateY(50%);
+            }
+        }
+    }
+
+    & .logo img {
+        margin-bottom: 32px;
+        width: 200px;
+    }
+
+    & .linksGroup {
+        display: flex;
+        justify-content: space-between;
+        gap: 56px;
+        color: var(--white-50);
+
+        & .links {
+            display: flex;
+            flex-direction: column;
+            margin-right: 56px;
+
+            &> :first-child {
+                margin-bottom: 24px;
+            }
+
+            & a {
+                margin-bottom: 16px;
+                text-decoration: none;
+                color: var(--black-100);
+            }
+
+            & .title {
+                font-weight: 600;
+            }
+        }
+    }
+}
